@@ -20,6 +20,11 @@ public class Caballo {
 		this.posicion = posicion;
 	}
 	
+	public Caballo () {
+		color=Color.NEGRO;
+		posicion=new Posicion(8,'b');
+	}
+	
 	
 	
 	
