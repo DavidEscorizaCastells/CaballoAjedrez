@@ -34,6 +34,18 @@ public class Caballo {
 		}
 	}
 	
+	public Caballo(Color color, char columna) {
+		if (Character.toLowerCase(columna)=='b' || Character.toLowerCase(columna)=='g') {
+			this.color=color;
+			if (color==Color.NEGRO) {
+				posicion=new Posicion(8, columna);
+			} else {
+				posicion=new Posicion(1, columna);
+			}
+		} else {
+			throw new IllegalArgumentException ("La columna es inválida. Debe ser b o g");
+		}
+	}
 	
 	
 }
