@@ -9,7 +9,11 @@ public class Posicion {
 	}
 	
 	public void setFila(int fila) {
-		this.fila = fila;
+		if (fila>=1 && fila <=8) {
+			this.fila = fila;
+		} else {
+			throw new IllegalArgumentException ("La fila no es correcta. Debe ser un número entre 1 y 8");
+		}
 	}
 	
 	public char getColumna() {
@@ -17,7 +21,11 @@ public class Posicion {
 	}
 	
 	public void setColumna(char columna) {
-		this.columna = columna;
+		if (columna>='a' && columna<='h') {
+			this.columna = columna;
+		} else {
+			throw new IllegalArgumentException ("La columna no es correcta. Debe ser una letra entre a y h");
+		}
 	}
 	
 }
