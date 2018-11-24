@@ -41,4 +41,20 @@ public class Posicion {
 		fila=posicion.fila;
 		columna=posicion.columna;
 	}
+	
+	@Override
+	public boolean equals(Object objeto) {
+		if (objeto instanceof Posicion) {
+			Posicion otraPosicion=(Posicion) objeto;
+			if (fila==otraPosicion.fila && columna==otraPosicion.columna) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+		return false;
+	}
+	
+	
+	
 }
