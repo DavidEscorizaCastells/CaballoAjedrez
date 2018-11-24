@@ -25,6 +25,14 @@ public class Caballo {
 		posicion=new Posicion(8,'b');
 	}
 	
+	public Caballo(Color color) {
+		this.color=color;
+		if (color==color.BLANCO) {
+			posicion=new Posicion(1,'b');
+		} else {
+			posicion=new Posicion(8,'b');
+		}
+	}
 	
 	
 	
