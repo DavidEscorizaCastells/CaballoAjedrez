@@ -21,11 +21,19 @@ public class Posicion {
 	}
 	
 	public void setColumna(char columna) {
-		if (columna>='a' && columna<='h') {
+		if (Character.toLowerCase(columna)>='a' && Character.toLowerCase(columna)<='h') {
 			this.columna = columna;
 		} else {
 			throw new IllegalArgumentException ("La columna no es correcta. Debe ser una letra entre a y h");
 		}
 	}
 	
+	public Posicion (int fila, char columna) {
+		if (fila>=1 && fila<=8 && Character.toLowerCase(columna)>='a' && Character.toLowerCase(columna)>='h') {
+			this.fila=fila;
+			this.columna=columna;
+		} else {
+			throw new IllegalArgumentException("La posición no existe. La fila debe ser entre 1 y 8 y la columna entre a y h.");
+		}
+	}
 }
