@@ -47,5 +47,9 @@ public class Caballo {
 		}
 	}
 	
+	public Caballo(Caballo otroCaballo) {
+		this.color=otroCaballo.color;
+		this.posicion=otroCaballo.posicion;
+	}
 	
 }
