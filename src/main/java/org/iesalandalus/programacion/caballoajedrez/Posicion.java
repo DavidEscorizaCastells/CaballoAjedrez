@@ -36,4 +36,9 @@ public class Posicion {
 			throw new IllegalArgumentException("La posición no existe. La fila debe ser entre 1 y 8 y la columna entre a y h.");
 		}
 	}
+	
+	public Posicion(Posicion posicion) {
+		fila=posicion.fila;
+		columna=posicion.columna;
+	}
 }
