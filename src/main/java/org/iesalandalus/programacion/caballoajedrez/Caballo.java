@@ -65,7 +65,7 @@ public class Caballo {
 				}
 				break;
 			case ARRIBA_DERECHA:
-				if(posicion.getFila()+2<=8 && posicion.getColumna()+1>='h') {
+				if(posicion.getFila()+2<=8 && posicion.getColumna()+1<='h') {
 					posicion.setFila(posicion.getFila()+2);
 					posicion.setColumna((char)(posicion.getColumna()+1));
 				} else {
@@ -73,7 +73,7 @@ public class Caballo {
 				}
 				break;
 			case DERECHA_ARRIBA:
-				if(posicion.getFila()+1<=8 && posicion.getColumna()+2>='h') {
+				if(posicion.getFila()+1<=8 && posicion.getColumna()+2<='h') {
 					posicion.setFila(posicion.getFila()+1);
 					posicion.setColumna((char)(posicion.getColumna()+2));
 				} else {
@@ -81,7 +81,7 @@ public class Caballo {
 				}
 				break;
 			case DERECHA_ABAJO:
-				if(posicion.getFila()-1<=1 && posicion.getColumna()+2>='h') {
+				if(posicion.getFila()-1>=1 && posicion.getColumna()+2<='h') {
 					posicion.setFila(posicion.getFila()-1);
 					posicion.setColumna((char)(posicion.getColumna()+2));
 				} else {
@@ -89,7 +89,7 @@ public class Caballo {
 				}
 				break;
 			case ABAJO_DERECHA:
-				if(posicion.getFila()-2<=1 && posicion.getColumna()+1>='h') {
+				if(posicion.getFila()-2>=1 && posicion.getColumna()+1<='h') {
 					posicion.setFila(posicion.getFila()-2);
 					posicion.setColumna((char)(posicion.getColumna()+1));
 				} else {
@@ -97,7 +97,7 @@ public class Caballo {
 				}
 				break;
 			case ABAJO_IZQUIERDA:
-				if(posicion.getFila()-2<=1 && posicion.getColumna()-1>='a') {
+				if(posicion.getFila()-2>=1 && posicion.getColumna()-1>='a') {
 					posicion.setFila(posicion.getFila()-2);
 					posicion.setColumna((char)(posicion.getColumna()-1));
 				} else {
@@ -113,7 +113,7 @@ public class Caballo {
 				}
 				break;
 			case IZQUIERDA_ABAJO:
-				if(posicion.getFila()-1<=1 && posicion.getColumna()-2>='a') {
+				if(posicion.getFila()-1>=1 && posicion.getColumna()-2>='a') {
 					posicion.setFila(posicion.getFila()-1);
 					posicion.setColumna((char)(posicion.getColumna()-2));
 				} else {

@@ -8,7 +8,7 @@ import org.junit.Test;
 
 public class CaballoTest {
 	
-	/*private Posicion posicionDefectoNegro = new Posicion(8, 'b');
+	private Posicion posicionDefectoNegro = new Posicion(8, 'b');
 	private Posicion posicionDefectoBlanco = new Posicion(1, 'b');
 	private Posicion posicionNegroG = new Posicion(8, 'g');
 	private Posicion posicionBlancoG = new Posicion(1, 'g');
@@ -79,29 +79,29 @@ public class CaballoTest {
 	}
 	
 	@Test
-	public void movimientoValidoTest() {
-		Caballo caballoNegroDefecto = new Caballo();
-		try {
-			caballoNegroDefecto.mover(Direccion.ABAJO_IZQUIERDA);
-			assertEquals(new Posicion(6, 'a'), caballoNegroDefecto.getPosicion());
-			caballoNegroDefecto.mover(Direccion.ABAJO_DERECHA);
-			assertEquals(new Posicion(4, 'b'), caballoNegroDefecto.getPosicion());
-			caballoNegroDefecto.mover(Direccion.ARRIBA_IZQUIERDA);
-			assertEquals(new Posicion(6, 'a'), caballoNegroDefecto.getPosicion());
-			caballoNegroDefecto.mover(Direccion.ARRIBA_DERECHA);
-			assertEquals(new Posicion(8, 'b'), caballoNegroDefecto.getPosicion());
-			caballoNegroDefecto.mover(Direccion.DERECHA_ABAJO);
-			assertEquals(new Posicion(7, 'd'), caballoNegroDefecto.getPosicion());
-			caballoNegroDefecto.mover(Direccion.IZQUIERDA_ABAJO);
-			assertEquals(new Posicion(6, 'b'), caballoNegroDefecto.getPosicion());
-			caballoNegroDefecto.mover(Direccion.DERECHA_ARRIBA);
-			assertEquals(new Posicion(7, 'd'), caballoNegroDefecto.getPosicion());
-			caballoNegroDefecto.mover(Direccion.IZQUIERDA_ARRIBA);
-			assertEquals(new Posicion(8, 'b'), caballoNegroDefecto.getPosicion());
-		} catch (OperationNotSupportedException e) {
-			// No deber√≠a saltar ninguna excepci√≥n ya que los movimientos son v√°lidos
-		}
-	}
+    public void movimientoValidoTest() {
+        Caballo caballoNegroDefecto = new Caballo();
+        try {
+            caballoNegroDefecto.mover(Direccion.ABAJO_IZQUIERDA);
+            assertEquals(new Posicion(6, 'a'), caballoNegroDefecto.getPosicion());
+            caballoNegroDefecto.mover(Direccion.ABAJO_DERECHA);
+            assertEquals(new Posicion(4, 'b'), caballoNegroDefecto.getPosicion());
+            caballoNegroDefecto.mover(Direccion.ARRIBA_IZQUIERDA);
+            assertEquals(new Posicion(6, 'a'), caballoNegroDefecto.getPosicion());
+            caballoNegroDefecto.mover(Direccion.ARRIBA_DERECHA);
+            assertEquals(new Posicion(8, 'b'), caballoNegroDefecto.getPosicion());
+            caballoNegroDefecto.mover(Direccion.DERECHA_ABAJO);
+            assertEquals(new Posicion(7, 'd'), caballoNegroDefecto.getPosicion());
+            caballoNegroDefecto.mover(Direccion.IZQUIERDA_ABAJO);
+            assertEquals(new Posicion(6, 'b'), caballoNegroDefecto.getPosicion());
+            caballoNegroDefecto.mover(Direccion.DERECHA_ARRIBA);
+            assertEquals(new Posicion(7, 'd'), caballoNegroDefecto.getPosicion());
+            caballoNegroDefecto.mover(Direccion.IZQUIERDA_ARRIBA);
+            assertEquals(new Posicion(8, 'b'), caballoNegroDefecto.getPosicion());
+        } catch (OperationNotSupportedException e) {
+            fail("No deberÌa saltar ninguna excepciÛn ya que los movimientos son v·lidos.");
+        }
+    }
 	
 	@Test
 	public void movimientoNoValidoTest() {
@@ -183,6 +183,6 @@ public class CaballoTest {
 	public void toStringTest() {
 		Caballo caballo = new Caballo();
 		assertEquals("Caballo [posici√≥n=[fila=8, columna=b], color=NEGRO]", caballo.toString());
-	}*/
+	}
 
 }

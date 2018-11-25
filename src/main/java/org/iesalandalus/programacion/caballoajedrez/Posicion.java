@@ -29,7 +29,7 @@ public class Posicion {
 	}
 	
 	public Posicion (int fila, char columna) {
-		if (fila>=1 && fila<=8 && Character.toLowerCase(columna)>='a' && Character.toLowerCase(columna)>='h') {
+		if (fila>=1 && fila<=8 && Character.toLowerCase(columna)>='a' && Character.toLowerCase(columna)<='h') {
 			this.fila=fila;
 			this.columna=columna;
 		} else {

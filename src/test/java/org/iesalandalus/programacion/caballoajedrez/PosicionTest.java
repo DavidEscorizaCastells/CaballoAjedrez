@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class PosicionTest {
 
-	/*@Test
+	@Test
 	public void constructorValidoTest() {
 		Posicion posicion;
 		posicion = new Posicion(1, 'a');
@@ -108,6 +108,6 @@ public class PosicionTest {
 	public void toStringTest() {
 		Posicion posicion = new Posicion(1, 'a');
 		assertEquals("[fila=1, columna=a]", posicion.toString());
-	}*/
+	}
 
 }
