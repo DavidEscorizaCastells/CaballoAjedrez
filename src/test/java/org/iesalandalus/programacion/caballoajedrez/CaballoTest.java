@@ -30,7 +30,7 @@ public class CaballoTest {
 		assertEquals(posicionDefectoBlanco, caballoBlanco.getPosicion());
 	}
 	
-	@Test
+	/*@Test
 	public void constructorUnParametroNoValidoTest() {
 		Caballo caballo = null;
 		try {
@@ -40,7 +40,7 @@ public class CaballoTest {
 			assertEquals("ERROR: No se puede asignar un color nulo.", e.getMessage());
 			assertNull(caballo);
 		}
-	}
+	}*/
 	
 	@Test
 	public void constructorDosParametrosValidoTest() {
