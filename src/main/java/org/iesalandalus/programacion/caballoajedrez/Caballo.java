@@ -134,4 +134,9 @@ public class Caballo {
 		}
 		return false;
 	}
+	
+	@Override
+	public String toString() {
+		return "El caballo "+color+" se encuentra en la posición "+getPosicion().toString();
+	}
 }
