@@ -121,5 +121,17 @@ public class Caballo {
 				}
 				break;
 		}
+		
+	}
+	
+	@Override
+	public boolean equals(Object objeto) {
+		if (objeto instanceof Caballo) {
+			Caballo otroCaballo=(Caballo) objeto;
+			if (color==otroCaballo.color && posicion.equals(otroCaballo.getPosicion())) {
+				return true;
+			}
+		}
+		return false;
 	}
 }
