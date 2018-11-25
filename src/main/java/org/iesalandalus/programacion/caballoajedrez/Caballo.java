@@ -1,5 +1,7 @@
 package org.iesalandalus.programacion.caballoajedrez;
 
+import javax.naming.OperationNotSupportedException;
+
 public class Caballo {
 	private Color color;
 	private Posicion posicion;
@@ -52,4 +54,72 @@ public class Caballo {
 		this.posicion=otroCaballo.posicion;
 	}
 	
+	public void mover(Direccion direccion) throws OperationNotSupportedException {
+		switch (direccion) {
+			case ARRIBA_IZQUIERDA:
+				if(posicion.getFila()+2<=8 && posicion.getColumna()-1>='a') {
+					posicion.setFila(posicion.getFila()+2);
+					posicion.setColumna((char)(posicion.getColumna()-1));
+				} else {
+					throw new OperationNotSupportedException ("El movimiento no puede realizarse.");
+				}
+				break;
+			case ARRIBA_DERECHA:
+				if(posicion.getFila()+2<=8 && posicion.getColumna()+1>='h') {
+					posicion.setFila(posicion.getFila()+2);
+					posicion.setColumna((char)(posicion.getColumna()+1));
+				} else {
+					throw new OperationNotSupportedException ("El movimiento no puede realizarse.");
+				}
+				break;
+			case DERECHA_ARRIBA:
+				if(posicion.getFila()+1<=8 && posicion.getColumna()+2>='h') {
+					posicion.setFila(posicion.getFila()+1);
+					posicion.setColumna((char)(posicion.getColumna()+2));
+				} else {
+					throw new OperationNotSupportedException ("El movimiento no puede realizarse.");
+				}
+				break;
+			case DERECHA_ABAJO:
+				if(posicion.getFila()-1<=1 && posicion.getColumna()+2>='h') {
+					posicion.setFila(posicion.getFila()-1);
+					posicion.setColumna((char)(posicion.getColumna()+2));
+				} else {
+					throw new OperationNotSupportedException ("El movimiento no puede realizarse.");
+				}
+				break;
+			case ABAJO_DERECHA:
+				if(posicion.getFila()-2<=1 && posicion.getColumna()+1>='h') {
+					posicion.setFila(posicion.getFila()-2);
+					posicion.setColumna((char)(posicion.getColumna()+1));
+				} else {
+					throw new OperationNotSupportedException ("El movimiento no puede realizarse.");
+				}
+				break;
+			case ABAJO_IZQUIERDA:
+				if(posicion.getFila()-2<=1 && posicion.getColumna()-1>='a') {
+					posicion.setFila(posicion.getFila()-2);
+					posicion.setColumna((char)(posicion.getColumna()-1));
+				} else {
+					throw new OperationNotSupportedException ("El movimiento no puede realizarse.");
+				}
+				break;
+			case IZQUIERDA_ARRIBA:
+				if(posicion.getFila()+1<=8 && posicion.getColumna()-2>='a') {
+					posicion.setFila(posicion.getFila()+1);
+					posicion.setColumna((char)(posicion.getColumna()-2));
+				} else {
+					throw new OperationNotSupportedException ("El movimiento no puede realizarse.");
+				}
+				break;
+			case IZQUIERDA_ABAJO:
+				if(posicion.getFila()-1<=1 && posicion.getColumna()-2>='a') {
+					posicion.setFila(posicion.getFila()-1);
+					posicion.setColumna((char)(posicion.getColumna()-2));
+				} else {
+					throw new OperationNotSupportedException ("El movimiento no puede realizarse.");
+				}
+				break;
+		}
+	}
 }
